@@ -76,24 +76,71 @@ let ctaHeadline = document.querySelector(".cta-text h1");
 ctaHeadline.textContent = siteContent["cta"]["h1"];
 
 //Updating CTA button Text
-let ctaButton = document.querySelector('.cta-text button');
-ctaButton.textContent = siteContent['cta']['button']
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = siteContent["cta"]["button"];
 
 //Updating CTA Image
-let ctaImage = document.getElementById('cta-img');
-ctaImage.setAttribute('src', siteContent['cta']['img-src'])
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute("src", siteContent["cta"]["img-src"]);
 
 //Updating Top Content Headline for both Features and About
-let topContentH4 = document.querySelectorAll('.top-content h4')
-topContentH4[0].textContent = siteContent["main-content"]["features-h4"]
-topContentH4[1].textContent = siteContent["main-content"]["about-h4"]
+let topContentH4 = document.querySelectorAll(".top-content h4");
+topContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+topContentH4[1].textContent = siteContent["main-content"]["about-h4"];
 
 //Updating Top Content Paragraph text for both Features and About
-let topContentP = document.querySelectorAll('p')
-topContentP[0].textContent = siteContent["main-content"]["features-content"]
-topContentP[1].textContent = siteContent["main-content"]["about-content"]
+let topContentP = document.querySelectorAll("p");
+topContentP[0].textContent = siteContent["main-content"]["features-content"];
+topContentP[1].textContent = siteContent["main-content"]["about-content"];
 
+//Updating Middle Image
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
+//Updating Bottom Content Headline
+let bottomContentH4 = document.querySelectorAll(".bottom-content h4");
+bottomContentH4[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContentH4[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
 
+//Updating Bottom Content Paragraph
+let bottomContentP = document.querySelectorAll(".bottom-content p");
+bottomContentP[0].textContent = siteContent["main-content"]["services-content"];
+bottomContentP[1].textContent = siteContent["main-content"]["product-content"];
+bottomContentP[2].textContent = siteContent["main-content"]["vision-content"];
 
+//Updating Contact Headline
+let contactHeadline = document.querySelector(".contact h4");
+contactHeadline.textContent = siteContent["contact"]["contact-h4"];
 
+//Updating Contact Details
+let contactDetails = document.querySelectorAll(".contact p");
+contactDetails[0].textContent = siteContent["contact"]["address"];
+contactDetails[1].textContent = siteContent["contact"]["phone"];
+contactDetails[2].textContent = siteContent["contact"]["email"];
+
+//Updating Footer
+let footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"];
+
+//Changing the Navigation Bar to Green
+anchorTags.forEach(anchorTags => {
+  anchorTags.style.color = "green";
+  anchorTags.style.textDecoration = "none";
+});
+
+//Adding the 2 new Items
+let blogTag = document.createElement("a");
+blogTag.textContent = "Blog";
+
+let homeTag = document.createElement("a");
+homeTag.textContent = "Home";
+
+//Prepending and appending the two items to nav
+let nav = document.querySelector("nav");
+nav.appendChild(blogTag);
+nav.prepend(homeTag);
+
+//Changing the color of the 2 new items
+blogTag.style.color = "green";
+homeTag.style.color = "green";
