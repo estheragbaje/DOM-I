@@ -67,6 +67,33 @@ anchorTags[5].textContent = siteContent["nav"]["nav-item-6"];
 //   anchorTag.textContent = anchorTexts[index];
 // })
 
-//Updating Header Image
+//Updating Logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
+
+//Updating CTA Headline
+let ctaHeadline = document.querySelector(".cta-text h1");
+ctaHeadline.textContent = siteContent["cta"]["h1"];
+
+//Updating CTA button Text
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent['cta']['button']
+
+//Updating CTA Image
+let ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('src', siteContent['cta']['img-src'])
+
+//Updating Top Content Headline for both Features and About
+let topContentH4 = document.querySelectorAll('.top-content h4')
+topContentH4[0].textContent = siteContent["main-content"]["features-h4"]
+topContentH4[1].textContent = siteContent["main-content"]["about-h4"]
+
+//Updating Top Content Paragraph text for both Features and About
+let topContentP = document.querySelectorAll('p')
+topContentP[0].textContent = siteContent["main-content"]["features-content"]
+topContentP[1].textContent = siteContent["main-content"]["about-content"]
+
+
+
+
+
